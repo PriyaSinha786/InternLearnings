@@ -1,0 +1,423 @@
+# AI Model Catalog - Categorized by Use Cases
+
+## Models Overview
+
+Based on analysis of capabilities and performance benchmarks, here's a comprehensive catalog of the models categorized by their optimal use cases:
+
+---
+
+## 1. WizardLM/WizardLM-13B-V1.2
+
+**Primary Categories:** `chat`, `reasoning`, `qna`
+**Secondary Categories:** `code_generation`, `summarization`
+
+```json
+{
+  "name": "wizardlm-13b-v1.2",
+  "provider": "WizardLM",
+  "description": "A 13B parameter model fine-tuned on Llama2 using Evol+ methods, designed to follow complex instructions with high performance on reasoning tasks.",
+  "endpoint": "wizardlm://models/wizardlm-13b-v1.2/versions/v1.2",
+  "capabilities": ["chat", "reasoning", "qna", "code_generation", "summarization"],
+  "inputs": ["text"],
+  "outputs": ["text"],
+  "languages": ["en"],
+  "last_training_data": "July 2023",
+  "deployment": {
+    "deployment_name": "wizardlm-13b-v1.2-deployment",
+    "deployment_type": "Standard",
+    "model_version": "v1.2",
+    "capacity_tpm": "26GB",
+    "content_safety": "Default",
+    "ai_resource": "wizardlm-cloud",
+    "resource_location": "Global",
+    "version_upgrade_policy": "Manual upgrade",
+    "data_residency": "Global"
+  }
+}
+```
+
+**Benchmarks:**
+- MT-Bench: 7.06
+- AlpacaEval: 89.17%
+- WizardLM Eval: 101.4%
+- HumanEval: 36.6 pass@1
+
+---
+
+## 2. Claude-Instant-v1
+
+**Primary Categories:** `chat`, `qna`, `summarization`
+**Secondary Categories:** `reasoning`
+
+```json
+{
+  "name": "claude-instant-v1",
+  "provider": "Anthropic",
+  "description": "A fast, efficient version of Claude optimized for speed and cost-effectiveness while maintaining good performance across general tasks.",
+  "endpoint": "anthropic://models/claude-instant-v1",
+  "capabilities": ["chat", "qna", "summarization", "reasoning"],
+  "inputs": ["text"],
+  "outputs": ["text"],
+  "languages": ["en", "es", "fr", "de", "it", "pt", "ja", "ko", "zh"],
+  "last_training_data": "Early 2023",
+  "deployment": {
+    "deployment_name": "claude-instant-v1-deployment",
+    "deployment_type": "Standard",
+    "model_version": "v1",
+    "capacity_tpm": "40K",
+    "content_safety": "Constitutional AI",
+    "ai_resource": "anthropic-cloud",
+    "resource_location": "US-East",
+    "version_upgrade_policy": "Auto upgrade",
+    "data_residency": "US-East"
+  }
+}
+```
+
+---
+
+## 3. Claude-v1
+
+**Primary Categories:** `chat`, `reasoning`, `qna`
+**Secondary Categories:** `summarization`
+
+```json
+{
+  "name": "claude-v1",
+  "provider": "Anthropic",
+  "description": "The original Claude model with strong reasoning capabilities and helpful, harmless, and honest responses.",
+  "endpoint": "anthropic://models/claude-v1",
+  "capabilities": ["chat", "reasoning", "qna", "summarization"],
+  "inputs": ["text"],
+  "outputs": ["text"],
+  "languages": ["en", "es", "fr", "de", "it", "pt"],
+  "last_training_data": "Early 2023",
+  "deployment": {
+    "deployment_name": "claude-v1-deployment",
+    "deployment_type": "Standard",
+    "model_version": "v1",
+    "capacity_tpm": "50K",
+    "content_safety": "Constitutional AI",
+    "ai_resource": "anthropic-cloud",
+    "resource_location": "US-East",
+    "version_upgrade_policy": "Manual upgrade",
+    "data_residency": "US-East"
+  }
+}
+```
+
+---
+
+## 4. Claude-v2
+
+**Primary Categories:** `chat`, `reasoning`, `qna`, `summarization`
+**Secondary Categories:** `code_generation`
+
+```json
+{
+  "name": "claude-v2",
+  "provider": "Anthropic",
+  "description": "Improved version of Claude with better reasoning capabilities, longer context window, and enhanced performance across multiple domains.",
+  "endpoint": "anthropic://models/claude-v2",
+  "capabilities": ["chat", "reasoning", "qna", "summarization", "code_generation"],
+  "inputs": ["text"],
+  "outputs": ["text"],
+  "languages": ["en", "es", "fr", "de", "it", "pt", "ja", "ko", "zh"],
+  "last_training_data": "Early 2023",
+  "deployment": {
+    "deployment_name": "claude-v2-deployment",
+    "deployment_type": "Standard",
+    "model_version": "v2",
+    "capacity_tpm": "100K",
+    "content_safety": "Constitutional AI",
+    "ai_resource": "anthropic-cloud",
+    "resource_location": "US-East",
+    "version_upgrade_policy": "Auto upgrade",
+    "data_residency": "US-East"
+  }
+}
+```
+
+---
+
+## 5. GPT-3.5-Turbo-1106
+
+**Primary Categories:** `chat`, `qna`, `summarization`
+**Secondary Categories:** `code_generation`, `reasoning`
+
+```json
+{
+  "name": "gpt-3.5-turbo-1106",
+  "provider": "OpenAI",
+  "description": "Updated GPT-3.5 Turbo model with improved instruction following, JSON mode, and better performance on various tasks.",
+  "endpoint": "openai://models/gpt-3.5-turbo-1106",
+  "capabilities": ["chat", "qna", "summarization", "code_generation", "reasoning"],
+  "inputs": ["text"],
+  "outputs": ["text"],
+  "languages": ["en", "es", "fr", "de", "it", "pt", "ja", "ko", "zh", "ru"],
+  "last_training_data": "April 2023",
+  "deployment": {
+    "deployment_name": "gpt-3.5-turbo-1106-deployment",
+    "deployment_type": "Standard",
+    "model_version": "1106",
+    "capacity_tpm": "16K",
+    "content_safety": "OpenAI Moderation",
+    "ai_resource": "openai-cloud",
+    "resource_location": "US-East",
+    "version_upgrade_policy": "Auto upgrade",
+    "data_residency": "Global"
+  }
+}
+```
+
+---
+
+## 6. GPT-4-1106-Preview
+
+**Primary Categories:** `reasoning`, `code_generation`, `chat`
+**Secondary Categories:** `qna`, `summarization`
+
+```json
+{
+  "name": "gpt-4-1106-preview",
+  "provider": "OpenAI",
+  "description": "Advanced GPT-4 model with enhanced reasoning capabilities, better code generation, and improved instruction following with large context window.",
+  "endpoint": "openai://models/gpt-4-1106-preview",
+  "capabilities": ["reasoning", "code_generation", "chat", "qna", "summarization"],
+  "inputs": ["text"],
+  "outputs": ["text"],
+  "languages": ["en", "es", "fr", "de", "it", "pt", "ja", "ko", "zh", "ru", "ar"],
+  "last_training_data": "April 2023",
+  "deployment": {
+    "deployment_name": "gpt-4-1106-preview-deployment",
+    "deployment_type": "Standard",
+    "model_version": "1106-preview",
+    "capacity_tpm": "128K",
+    "content_safety": "OpenAI Moderation",
+    "ai_resource": "openai-cloud",
+    "resource_location": "US-East",
+    "version_upgrade_policy": "Manual upgrade",
+    "data_residency": "Global"
+  }
+}
+```
+
+---
+
+## 7. Meta/Code-Llama-Instruct-34B-Chat
+
+**Primary Categories:** `code_generation`, `chat`
+**Secondary Categories:** `qna`, `reasoning`
+
+```json
+{
+  "name": "code-llama-instruct-34b-chat",
+  "provider": "Meta",
+  "description": "Specialized Code Llama model fine-tuned for code generation and programming assistance with chat capabilities.",
+  "endpoint": "meta://models/code-llama-instruct-34b-chat",
+  "capabilities": ["code_generation", "chat", "qna", "reasoning"],
+  "inputs": ["text"],
+  "outputs": ["text"],
+  "languages": ["en", "python", "javascript", "java", "c++", "c", "bash"],
+  "last_training_data": "September 2023",
+  "deployment": {
+    "deployment_name": "code-llama-34b-chat-deployment",
+    "deployment_type": "Standard",
+    "model_version": "34b-instruct",
+    "capacity_tpm": "68GB",
+    "content_safety": "Default",
+    "ai_resource": "meta-llama-cloud",
+    "resource_location": "US-West",
+    "version_upgrade_policy": "Manual upgrade",
+    "data_residency": "Global"
+  }
+}
+```
+
+---
+
+## 8. Meta/Llama-2-70B-Chat
+
+**Primary Categories:** `chat`, `reasoning`, `qna`
+**Secondary Categories:** `summarization`, `code_generation`
+
+```json
+{
+  "name": "llama-2-70b-chat",
+  "provider": "Meta",
+  "description": "Large-scale Llama 2 model optimized for chat applications with strong reasoning and conversation capabilities.",
+  "endpoint": "meta://models/llama-2-70b-chat",
+  "capabilities": ["chat", "reasoning", "qna", "summarization", "code_generation"],
+  "inputs": ["text"],
+  "outputs": ["text"],
+  "languages": ["en", "es", "fr", "de", "it", "pt"],
+  "last_training_data": "July 2023",
+  "deployment": {
+    "deployment_name": "llama-2-70b-chat-deployment",
+    "deployment_type": "Standard",
+    "model_version": "70b-chat",
+    "capacity_tpm": "140GB",
+    "content_safety": "Llama Guard",
+    "ai_resource": "meta-llama-cloud",
+    "resource_location": "US-West",
+    "version_upgrade_policy": "Manual upgrade",
+    "data_residency": "Global"
+  }
+}
+```
+
+---
+
+## 9. Mistralai/Mistral-7B-Chat
+
+**Primary Categories:** `chat`, `qna`
+**Secondary Categories:** `summarization`, `reasoning`
+
+```json
+{
+  "name": "mistral-7b-chat",
+  "provider": "Mistral AI",
+  "description": "Efficient 7B parameter model optimized for chat and conversational AI with good performance-to-size ratio.",
+  "endpoint": "mistralai://models/mistral-7b-chat",
+  "capabilities": ["chat", "qna", "summarization", "reasoning"],
+  "inputs": ["text"],
+  "outputs": ["text"],
+  "languages": ["en", "fr", "de", "es", "it"],
+  "last_training_data": "October 2023",
+  "deployment": {
+    "deployment_name": "mistral-7b-chat-deployment",
+    "deployment_type": "Standard",
+    "model_version": "7b-chat",
+    "capacity_tpm": "14GB",
+    "content_safety": "Default",
+    "ai_resource": "mistral-cloud",
+    "resource_location": "EU-West",
+    "version_upgrade_policy": "Auto upgrade",
+    "data_residency": "EU-West"
+  }
+}
+```
+
+---
+
+## 10. Mistralai/Mixtral-8x7B-Chat
+
+**Primary Categories:** `chat`, `reasoning`, `qna`, `code_generation`
+**Secondary Categories:** `summarization`
+
+```json
+{
+  "name": "mixtral-8x7b-chat",
+  "provider": "Mistral AI",
+  "description": "Mixture of experts model with 8x7B parameters offering strong performance across multiple domains with efficient inference.",
+  "endpoint": "mistralai://models/mixtral-8x7b-chat",
+  "capabilities": ["chat", "reasoning", "qna", "code_generation", "summarization"],
+  "inputs": ["text"],
+  "outputs": ["text"],
+  "languages": ["en", "fr", "de", "es", "it", "pt"],
+  "last_training_data": "December 2023",
+  "deployment": {
+    "deployment_name": "mixtral-8x7b-chat-deployment",
+    "deployment_type": "Standard",
+    "model_version": "8x7b-instruct",
+    "capacity_tpm": "45GB",
+    "content_safety": "Default",
+    "ai_resource": "mistral-cloud",
+    "resource_location": "EU-West",
+    "version_upgrade_policy": "Auto upgrade",
+    "data_residency": "EU-West"
+  }
+}
+```
+
+---
+
+## 11. Zero-One-AI/Yi-34B-Chat
+
+**Primary Categories:** `chat`, `reasoning`, `qna`
+**Secondary Categories:** `code_generation`, `summarization`
+
+```json
+{
+  "name": "yi-34b-chat",
+  "provider": "Zero One AI",
+  "description": "Yi series 34B parameter model optimized for chat with strong multilingual capabilities and reasoning performance.",
+  "endpoint": "zeroone://models/yi-34b-chat",
+  "capabilities": ["chat", "reasoning", "qna", "code_generation", "summarization"],
+  "inputs": ["text"],
+  "outputs": ["text"],
+  "languages": ["en", "zh", "ja", "ko", "es", "fr", "de"],
+  "last_training_data": "November 2023",
+  "deployment": {
+    "deployment_name": "yi-34b-chat-deployment",
+    "deployment_type": "Standard",
+    "model_version": "34b-chat",
+    "capacity_tpm": "68GB",
+    "content_safety": "Default",
+    "ai_resource": "yi-cloud",
+    "resource_location": "Asia-Pacific",
+    "version_upgrade_policy": "Manual upgrade",
+    "data_residency": "Asia-Pacific"
+  }
+}
+```
+
+---
+
+## Category-Based Recommendations
+
+### Best Models by Category:
+
+#### **Chat & Conversational AI:**
+1. **GPT-4-1106-Preview** - Most advanced conversational capabilities
+2. **Claude-v2** - Excellent for nuanced, helpful conversations
+3. **Llama-2-70B-Chat** - Strong open-source alternative
+4. **Mixtral-8x7B-Chat** - Efficient with good performance
+
+#### **Code Generation:**
+1. **Code-Llama-Instruct-34B-Chat** - Specialized for programming
+2. **GPT-4-1106-Preview** - Excellent general-purpose coding
+3. **Mixtral-8x7B-Chat** - Good balance of performance and efficiency
+4. **WizardLM-13B-V1.2** - Decent coding with HumanEval 36.6 pass@1
+
+#### **Reasoning & Complex Tasks:**
+1. **GPT-4-1106-Preview** - Superior logical reasoning
+2. **Claude-v2** - Strong analytical capabilities  
+3. **WizardLM-13B-V1.2** - High performance on reasoning benchmarks
+4. **Mixtral-8x7B-Chat** - Good reasoning with efficiency
+
+#### **Question Answering (QnA):**
+1. **GPT-4-1106-Preview** - Most comprehensive knowledge
+2. **Claude-v2** - Accurate and helpful responses
+3. **WizardLM-13B-V1.2** - Strong instruction following
+4. **Yi-34B-Chat** - Good multilingual QnA
+
+#### **Summarization:**
+1. **Claude-v2** - Excellent at extracting key information
+2. **GPT-3.5-Turbo-1106** - Fast and effective summaries
+3. **Claude-Instant-v1** - Quick summarization for speed
+4. **Mixtral-8x7B-Chat** - Good balance of quality and speed
+
+#### **Cost-Effective Options:**
+1. **Mistral-7B-Chat** - Smallest model with decent performance
+2. **Claude-Instant-v1** - Fast and cost-effective
+3. **GPT-3.5-Turbo-1106** - Good performance-to-cost ratio
+4. **WizardLM-13B-V1.2** - Open-source with strong capabilities
+
+#### **Multilingual Support:**
+1. **GPT-4-1106-Preview** - Broadest language support
+2. **Yi-34B-Chat** - Strong in Asian languages
+3. **Claude-v2** - Good European language support
+4. **Mixtral-8x7B-Chat** - European language focus
+
+---
+
+## Performance Notes:
+
+- **Model sizes range from 7B to 70B parameters**
+- **Context windows vary from 4K to 128K tokens**
+- **Training data cutoffs mostly from 2023**
+- **Deployment types are primarily "Standard"**
+- **Geographic distribution covers US, EU, and Asia-Pacific regions**
+
+This catalog provides a comprehensive view of each model's strengths and optimal use cases based on current benchmarks and capabilities.
